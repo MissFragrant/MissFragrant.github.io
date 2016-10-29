@@ -27,7 +27,7 @@ zhihu_username: Demon404
 # Build settings
 # use Github Flavored Markdown !important
 # document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
+markdown: markdown
 kramdown:
   input: GFM
 highlighter: rouge
