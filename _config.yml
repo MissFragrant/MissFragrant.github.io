@@ -31,6 +31,8 @@ markdown: markdown
 kramdown:
   input: GFM
 highlighter: rouge
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
 
 gems:
 - jekyll-gallery-generator
@@ -61,7 +63,7 @@ defaults:
 comments :
   provider : duoshuo
   duoshuo :
-    short_name : Demon4004
+    short_name : Demon404
   disqus :
       short_name : Demon404
 
