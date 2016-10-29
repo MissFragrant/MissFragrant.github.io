@@ -7,7 +7,7 @@ description:
 ---
 
 接下来，我们接着(一)继续讲，今天我们学习的是Image组件和ScrollView组件。
-###Image组件
+###   Image组件
 Image:一个用于显示多种不同类型图片的React组件。那么要如何使用呢？
 引入本地图片:
 
@@ -45,7 +45,7 @@ Image:一个用于显示多种不同类型图片的React组件。那么要如何
 ![](http://upload-images.jianshu.io/upload_images/2781235-8b13f8245416db37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-###ScrollView组件
+###   ScrollView组件
 ScrollView必须有一个确定的高度才能正常使用，它实际上所做的就是将一系列不确定高度的子组件装进一个确定高度的容器,而这个容器就是ScrollView。  
 contentContainerStyle StyleSheetPropType(ViewStylePropTypes) 
 这些样式会应用到一个内层的内容容器上，所有的子视图都会包裹在内容容器内。  
