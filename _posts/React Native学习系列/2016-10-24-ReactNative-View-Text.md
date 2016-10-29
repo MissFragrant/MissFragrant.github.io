@@ -7,54 +7,69 @@ description:
 ---
 
 
-近段时间一直在忙，所以博客也没有更新，这两天我翻了一下写的这几篇博客，感觉写的都很片面，所以，我想重新写一个系列教程，从最基础的开始，来让大家更容易学会React-Native。
-##   这个系列大部分只介绍Android和iOS通用的部分  
+近段时间一直在忙，所以博客也没有更新，这两天我翻了一下写的这几篇博客，感觉写的都很片面，所以，我想重新写一个系列教程，从最基础的开始，来让大家更容易学会React-Native。  
+
+##   这个系列大部分只介绍Android和iOS通用的部分   
+
 ###   一、关于RN环境搭建    
+ 
 这个问题我在博客上写过，既然是系列教程，那么就在这个系列里面重新再写一遍
-####   1、Mac上搭建RN开发环境
+####   1、Mac上搭建RN开发环境  
+
 安装homebrew:打开终端输入  
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+```  
+
 在Max OS X 10.11（El Capitan)版本中，homebrew在安装软件时可能会碰到/usr/local目录不可写的权限问题。可以使用下面的命令修复：  
 
 ```
 sudo chown -R `whoami` /usr/local
-```
+```  
+
 通过HomeBrew来安装Node.js  
 
 ```
 brew install node
-```
+```  
+
 安装React Native的命令行工具（react-native-cli）  
 
 ```
 npm install -g react-native-cli
-```
+```  
+
 如果你看到EACCES: permission denied这样的权限报错，那么修复权限问题  
 
 ```
 sudo chown -R `whoami` /usr/local
-```
+```  
+
 既然要做iOS开发，那么Xcode不会不知道吧，开发iOS必不可少的工具Xcode，这个可以直接在AppStore里面下载。
 安装WatchMan  
 
 ```
 brew install watchman
-```
+```  
+
 环境搭建完毕，创建运行RN项目  
 
 ```
 react-native init AwesomeProject
 cd AwesomeProject
 react-native run-ios
-```
-####   2、Mac上搭建RN安卓开发环境
-这里有一篇教程挺详细的[react native android开发环境搭建（mac系统)](http://www.jianshu.com/p/cb8bbb499841)，这里我就不再多说(我不会告诉大家我搭建完成之后就没在意搭建的具体步骤...)。
-###   二、关于RN文件介绍
+```  
+
+####   2、Mac上搭建RN安卓开发环境  
+
+这里有一篇教程挺详细的[react native android开发环境搭建（mac系统)](http://www.jianshu.com/p/cb8bbb499841)，这里我就不再多说(我不会告诉大家我搭建完成之后就没在意搭建的具体步骤...)。  
+
+###   二、关于RN文件介绍  
+
 刚创建好的应用程序文件夹如下图所示
-![](http://upload-images.jianshu.io/upload_images/2781235-731649146c7b4884.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://upload-images.jianshu.io/upload_images/2781235-731649146c7b4884.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+
 其中app文件夹是我自己创建的，咱们看一下文件夹中的内容：__tests__文件夹是最近才加进去的，前几个版本没有，应该是测试用的，暂时没做研究，ios和android文件夹对应iOS和安卓程序的文件存放的文件夹，这些我们不用管，node_modules是我们开发所需要的依赖库。package.json是配置文件，index.android.js和index.ios.js是我们程序的入口文件，我们写的代码就是在这里写的。打开index.ios.js我们可以看到这些  
 
 ```
@@ -105,18 +120,25 @@ const styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
-```
-具体介绍可以看我的[这篇博客](http://www.cnblogs.com/demon404/p/5649837.html)
-好了，接下来开始我们的系列教程
-###   三、Text
+```  
+
+具体介绍可以看我的[这篇博客](http://www.cnblogs.com/demon404/p/5649837.html)  
+
+好了，接下来开始我们的系列教程  
+
+###   三、Text  
+
 这里我直接用我已经写好的框架来介绍RN的组件Text
-显而易见，Text就是文本，就如同你现在看到的文字。
-#####   那么如何使用呢？
+显而易见，Text就是文本，就如同你现在看到的文字。  
+
+#####   那么如何使用呢？  
+
 其实在index.ios.js文件中有这样的组件。那是最基础的用法  
 
 ```
 <Text> Welcome to React Native!</Text>
-```
+```  
+
 其实Text有很多属性和样式,以下是一些常用的属性和样式！  
 
 ```
@@ -177,8 +199,10 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',//下划线和删除线的样式：['none' /*default*/, 'underline', 'line-through', 'underline line-through'
   }
 });
-```
-###   四、View
+```  
+
+###   四、View  
+
 接下来我们说最常用的控件View，在开发过程中，View是必不可少的  
 
 ```
@@ -191,7 +215,8 @@ export default class ViewClass extends Component {
     );
   }
 }
-```
+```  
+
 View是一个支持Flexbox布局、样式、一些触摸处理、和一些无障碍功能的容器，并且它可以放到其它的视图里，也可以有任意多个任意类型的子视图。不论在什么平台上，View都会直接对应一个平台的原生视图。
 View使用挺简单的，直接使用就可以，这里我着重介绍一下View的属性和它的一些样式,其中View有一个最重要的Flex布局，这个篇幅比较长，咱们新开一个文章讲解  
 
@@ -271,6 +296,8 @@ const styles = StyleSheet.create({
     opacity: 0.5,//设置透明度
   }
 });
-```  
-这些代码，我放在了我的github上：https://github.com/Demon404/Honey
+```    
+
+这些代码，我放在了我的github上：https://github.com/Demon404/Honey  
+
 ps:以后这个系列的教程会全放在这个仓库中！
