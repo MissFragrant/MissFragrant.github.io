@@ -61,7 +61,7 @@ defaults:
 comments :
   provider : duoshuo
   duoshuo :
-    short_name : Demon404
+    short_name : Demon4004
   disqus :
       short_name : Demon404
 
