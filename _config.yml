@@ -1,5 +1,5 @@
 # Site settings
-title: Microdust
+title: Demon404
 header-img: "img/tree.jpg"
 tagline: "吉光片羽"
 description: "在遙遠的地方 一切虔誠終必相遇"
@@ -14,7 +14,7 @@ owner:
   bio: "明朝即長路 惜取此時心"
 
 # Data
-gavatar: 'http://pic.cnblogs.com/avatar/820858/20160808171031.png'
+gavatar: "https://pic.cnblogs.com/avatar/820858/20160808171031.png"
 favicon: img/favicon.ico
 
 douban_username: ''
