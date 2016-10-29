@@ -27,10 +27,18 @@ zhihu_username: Demon404
 # Build settings
 # use Github Flavored Markdown !important
 # document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: markdown
-kramdown:
-  input: GFM
+markdown:    kramdown
 highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
