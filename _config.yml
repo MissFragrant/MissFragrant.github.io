@@ -2,7 +2,7 @@
 title: Demon404
 header-img: "img/tree.jpg"
 tagline: "吉光片羽"
-description: "在遙遠的地方 一切虔誠終必相遇"
+description: "不忘初心，方得始终！"
 baseurl: ""
 url: "http://azeril.me"
 #url: "http://localhost:4000"
@@ -11,7 +11,7 @@ url: "http://azeril.me"
 owner:
   name: "Demon404"
   email: demonshow404@gmail.com
-  bio: "明朝即長路 惜取此時心"
+  bio: "我有故事，你要听吗？"
 
 # Data
 gavatar: "https://pic.cnblogs.com/avatar/820858/20160808171031.png"
